@@ -122,3 +122,9 @@ a:active{
 .searchBtn:active{
     background-color: darkgray;
 }
+.filter-container{
+    width: 100%;
+    text-align: left;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
