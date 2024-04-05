@@ -12,10 +12,10 @@ Questions
 
   NO it is not mandatory but recommended.
 
-● {TitleComponent()} vs {<TitleComponent/>} vs
-{<TitleComponent></TitleComponent>} in JSX
+● '{TitleComponent()}' vs '{<TitleComponent/>}' vs '{<TitleComponent></TitleComponent>}' in JSX
 
     All these are same.
+
 ● How can I write comments in JSX?
 
     {/* */}
