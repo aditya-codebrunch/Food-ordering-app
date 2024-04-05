@@ -1,6 +1,6 @@
 Below is my notes
 
-The app implemented has no backend or apis integrated to it and it only takes one feature of the food-ordering-app as of now that is 'See Restaurants' the data is static and only the UI is developed for the search functionality and not the functionality itself. All other links are only clickable their functionalities are not implemented.
+The app implemented has no backend or apis integrated to it and it only takes one feature of the food-ordering-app as of now that is 'See Restaurants' the data is static and only the UI is developed for the search functionality and not the functionality itself. All other links are only clickable, their functionalities are not implemented. Filtering of restaurants is implemented.
 
 Questions
 
