@@ -130,3 +130,12 @@ a:active{
     margin-top:10px;
     margin-bottom: 10px;
 }
+
+
+.shimmer-card{
+    width:17%;
+    height:320px;
+    margin-right:2%;
+    margin-bottom: 20px;
+    background-color: lightgray;
+}
