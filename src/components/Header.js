@@ -1,4 +1,4 @@
-import {logo} from '../utils/constants.js';
+import logo from '../../public/images/Food-logo.png';
 
 const Header = () => {
     return (

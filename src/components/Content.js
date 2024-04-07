@@ -2,11 +2,20 @@ import Search from './Search.js';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import RestaurantCard from './RestaurantCard.js';
-import { restaurants } from '../utils/constants.js';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { FETCH_MOCK_DATA_URL } from '../utils/constants.js'
 
+let restaurants = [];
 const Content = () => {
-    const [restaurantsList, setRestaurantsList] = useState(restaurants);
+    const [restaurantsList, setRestaurantsList] = useState([]);
+    useEffect(()=>{
+        fetch(FETCH_MOCK_DATA_URL).then((response)=>{
+            return response.json();
+        }).then((data)=>{
+            restaurants = data;
+            setRestaurantsList(restaurants);
+        })
+    },[]);
     return (
         <div id="content">
             <div className='content-container'>

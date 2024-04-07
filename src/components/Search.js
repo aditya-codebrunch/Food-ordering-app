@@ -1,4 +1,4 @@
-import searchIcon from '../images/magnifying-glass.png';
+import searchIcon from '../../public/images/magnifying-glass.png';
 import {useState} from 'react';
 const Search = (props) => {
     const { setResList, restaurants } = props;

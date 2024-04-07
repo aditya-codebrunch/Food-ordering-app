@@ -1,8 +1,15 @@
-Below is my notes
+Below is my notes about the project.
 
-The app implemented has no backend or apis integrated to it and it only takes one feature of the food-ordering-app as of now that is 'See Restaurants' the data is static and only the UI is developed for the search functionality and not the functionality itself. All other links are only clickable, their functionalities are not implemented. Filtering of restaurants is implemented.
+About the Project
 
-Questions
+Food ordering app UI is built in this project. And that too only the 'See Restaurants' and filtering of reastaurants features. They are implemented.
+
+There is a server folder in the project, which implements a simple http server using node express. The mock data for the restaurants is fetched from this server by an api. This is to imitate fetching data from backend.
+Also this server is being used to serve the app itself.
+
+So to run this project, first the frontend should be built and that creates a dist folder which would have the build.After that get into the server folder via terminal and run 'node index.js', this will run the http server at localhost:3000 and will serve the app which can be accessed in the browser by the url 'http://localhost:3000'
+
+Below notes is not related to the project.
 
 ● Is JSX mandatory for React?
 
