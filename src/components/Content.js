@@ -38,6 +38,7 @@ const Content = () => {
                     }}>See All Restaurants</button>
                 </div>
                 {
+                // conditional rendering
                   restaurantsList.length?
                    (restaurantsList.map((restaurant) => {
                     return (<RestaurantCard key={restaurant.id} restaurant={restaurant} />);

@@ -26,10 +26,10 @@
     cursor: pointer;
 }
 a:hover{
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 a:active{
-    background-color: darkgray;
+    background-color: lightgray;
 }
 #content{
     display: flex;
@@ -84,15 +84,34 @@ a:active{
 
 }
 
+.sign-in a{
+    background-color: white;
+    padding:8% 18%;
+    border-radius: 5%;
+    box-shadow: 3px 3px 4px 4px lightgray ;
+}
+
+.sign-in a:hover{
+    background-color: whitesmoke;
+}
+
+.sign-in a:active{
+    background-color: lightgrey;
+}
+
+
 .nav-items > ul{
     display: flex;
 }
 
-.nav-items > ul > li{
+.nav-items > ul > li {
         padding:5px;
         list-style-type:none;
-        font-size: larger;
+        font-size: 17px;
 }
+
+
+
 
 .search-container{
     width:100%;
