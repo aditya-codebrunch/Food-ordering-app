@@ -148,5 +148,12 @@ Below notes is not related to the project.
 
 ● What is async and await?
 
-  
-● What is the use of `const json = await data.json();` in getRestaurants()
+  async-await combo are used to handle promises
+
+  async used with functions - we can make a function AsyncFunction object by keeping async before function declaration
+
+  async function always returns a promise
+
+  await can only be used inside an async function and at the top level of a module.
+
+  you write await infront of the promise, 'await promise' returns the value of the promise if it is resolved and if it is rejected, throws reason as error.
