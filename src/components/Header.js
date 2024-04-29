@@ -1,5 +1,6 @@
 import logo from '../../public/images/Food-logo.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -11,9 +12,9 @@ const Header = () => {
             </div>
             <div className='nav-items'>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Contact Us</a></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/contact'>Contact Us</Link></li>
                     <li><a>Cart</a></li>
                     <li className='sign-in'><a onClick={()=>{
                         if(logInOrOut === 'login'){

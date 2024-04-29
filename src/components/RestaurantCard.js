@@ -2,7 +2,7 @@
 const RestaurantCard = (props) => {
     const { restaurant } = props;
     return (
-        <div className='res-card'>
+        <>
             <figure>
                 <img className='resImg' src={restaurant.resImage} />
                 <figcaption>
@@ -12,7 +12,7 @@ const RestaurantCard = (props) => {
                     <p>{'ETA ' + restaurant.eta + ' mins'}</p>
                 </figcaption>
             </figure>
-        </div>
+        </>
     );
 };
 

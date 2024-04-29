@@ -157,3 +157,31 @@ Below notes is not related to the project.
   await can only be used inside an async function and at the top level of a module.
 
   you write await infront of the promise, 'await promise' returns the value of the promise if it is resolved and if it is rejected, throws reason as error.
+
+ 
+● What are various ways to add images into our App?
+
+  https://builtin.com/software-engineering-perspectives/react-js-image
+
+● What would happen if we do console.log(useState())?
+
+  useState returns an array with exactly two values:
+
+    The current state. During the first render, it will match the initialState you have passed.
+
+    The set function that lets you update the state to a different value and trigger a re-render.
+
+● How will useEffect behave if we don't add a dependency array ?
+
+  It will be executed after each rerender of the component.
+
+● What is SPA?
+
+  SPA stands for single page application, here there will be single html file, so different content is loaded to this html page via DOM manipulations.
+
+● What is difference between Client Side Routing and Server Side Routing?
+
+  Server side routing is for every route change a new html file is requested from the server.
+
+  Client side routing - only the index.html is requested through the server, after that all the routing is handled by the client itself without making any http requests to server.
+

@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
+const MOCK_RESTAURANT_DATA = require('./constants');
 
 app.use(express.static('../public'));
 app.use(express.static('../public/images'));
@@ -19,6 +20,11 @@ app.get('/', function (req, res) {
           console.log('Sent:', fileName);
       }
   });
+});
+
+app.get('/restaurants/:id', function(req,res){
+  let restaurantData = MOCK_RESTAURANT_DATA.restaurantData[req.params.id];
+  res.json(restaurantData);
 });
 
 app.use(express.static('../dist'));
