@@ -27,6 +27,11 @@ app.get('/restaurants/:id', function(req,res){
   res.json(restaurantData);
 });
 
+app.get('/users', function(req,res){
+  let users = MOCK_RESTAURANT_DATA.users;
+  res.json(users);
+});
+
 app.use(express.static('../dist'));
 
 app.get('*', function (req, res) {

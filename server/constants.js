@@ -144,7 +144,19 @@ const restaurantData = {
         ]
     }
 }
-
+const users = [
+    {
+        name:'Aditya Allam',
+        emailId:'aditya.allam@gmail.com',
+        mobileNumber: '9100726870'
+    },
+    {
+        name:'Chanakya Vadla',
+        emailId:'chanakya.vadla@gmail.com',
+        mobileNumber:'9963974945'
+    }
+]
 module.exports = {
-    restaurantData:restaurantData
+    restaurantData:restaurantData,
+    users:users
 }

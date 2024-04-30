@@ -7,9 +7,24 @@
     flex-direction: column;
 }
 
+.counter{
+    text-align: right;
+    padding-right:1%;
+    margin-bottom: 5px;
+}
+
 a{
     text-decoration: none;
     color:black;
+}
+
+.user{
+    margin-bottom:10px;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    width:100%;
+    padding:30px 0px;
+    min-height: 80px;
 }
 
 .menu{
@@ -161,9 +176,6 @@ a:active{
         font-size: 17px;
 }
 
-
-
-
 .search-container{
     width:100%;
     display:flex;
@@ -212,5 +224,8 @@ a:active{
 
 .mid-content{
     min-height:70vh;
+    width:92%;
 }
+
+
 
