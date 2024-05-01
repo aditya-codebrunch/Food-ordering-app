@@ -185,3 +185,45 @@ Below notes is not related to the project.
 
   Client side routing - only the index.html is requested through the server, after that all the routing is handled by the client itself without making any http requests to server.
 
+● How do you create Nested Routes react-router-dom cofiguration
+
+  https://reactrouter.com/en/main/start/overview
+
+
+● Read abt createHashRouter, createMemoryRouter from React Router docs.
+
+● What is the order of life cycle method calls in Class Based Components
+
+  constructor, render, componentDidMount
+
+               render, componentDidUpdate
+               
+  If the component is gone from the page - componentWillUnmount
+
+● Why do we use componentDidMount?
+
+  After Initial render if you want to do something, usually used to make the api calls
+
+● Why do we use componentWillUnmount?
+
+  Any cleanup - like clearing intervals
+
+● (Research) Why do we use super(props) in constructor?
+
+  https://stackoverflow.com/questions/31067368/how-to-extend-a-class-without-having-to-use-super-in-es6/31079103#31079103
+
+  https://stackoverflow.com/questions/30571875/whats-the-difference-between-super-and-superprops-in-react-when-using-e
+
+  https://overreacted.io/why-do-we-write-super-props/
+
+
+● (Research) Why can't we have the callback function of useEffect async?
+
+  Whatever we return in async function is wrapped in promise, useEffect callback function returns a clean up 
+
+  function to be called when component unmounts, this clean up function cannot be called if the useEffect
+
+  callback function is async because then that clean up function would be wrapped up in a promise and React
+
+  would not be able to call the clean up function.
+
