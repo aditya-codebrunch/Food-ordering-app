@@ -1,26 +1,15 @@
 import RestaurantCard from './RestaurantCard.js';
 import Shimmer from './Shimmer.js';
 import Search from './Search.js';
-import { useState, useEffect } from 'react';
-import { FETCH_MOCK_DATA_URL } from '../utils/constants.js';
+import useRestaurantsList from '../utils/useRestaurantsList.js';
+import useOnline from '../utils/useOnline.js';
 import { Link } from 'react-router-dom';
 
 let restaurants = [];
 const Content = () => {
-    const [restaurantsList, setRestaurantsList] = useState([]);
-    useEffect(() => {
-        fetch(FETCH_MOCK_DATA_URL).then((response) => {
-            return response.json();
-        }, (error) => {
-            console.log(error);
-        }).then((data) => {
-            restaurants = data;
-            setRestaurantsList(restaurants);
-        }, (error) => {
-            console.log(error);
-        });
-    }, []);
-    return (
+    const [restaurantsList,setRestaurantsList] = useRestaurantsList();
+    const online = useOnline();
+    return !online?(<h1>You are offline, fix your internet Connection</h1>):(
         <>
             <Search setResList={setRestaurantsList} restaurants={restaurants} />
             <div className='filter-container'>

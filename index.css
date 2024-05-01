@@ -7,6 +7,10 @@
     flex-direction: column;
 }
 
+.online{
+    line-height: 140%;
+}
+
 .counter{
     text-align: right;
     padding-right:1%;

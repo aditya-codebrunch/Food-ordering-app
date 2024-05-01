@@ -8,6 +8,7 @@ app.use(express.static('../public'));
 app.use(express.static('../public/images'));
 
 app.get('/', function (req, res) {
+  console.log(req.originalUrl);
   const options = {
       root: '../dist'
   };
