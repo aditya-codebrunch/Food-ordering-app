@@ -227,3 +227,34 @@ Below notes is not related to the project.
 
   would not be able to call the clean up function.
 
+● When and why do we need lazy()?
+
+  To load a component dynamically 'lazy' from 'react' is used.
+
+● Why we get this error : 
+
+    'A component suspended while responding to
+
+    synchronous input. This will cause the UI to be replaced with a loading indicator.
+
+    To fix, updates that suspend should be wrapped with startTransition'? 
+
+    How does suspense fix this error?
+
+    When we are doing lazy loading a component and when react tries to render the component before it loads
+
+    this error will come. If we wrap the component with suspense tag, react waits for the lazy module to load 
+    
+    before it renders the component and the error will go away. suspense component is also used to display 
+    
+    fallback content while waiting for the actual component to be available.
+
+
+● Advantages and disadvantages of using this code splitting pattern?
+
+  If a js file has too many components its size increases so it is good to split the js file into modules
+
+  to decrease the loading time but at the same time too many modules will increase the browser requests to
+
+  the server, so do the code splitting when it is required in a smart way keeping these two points in mind.
+
