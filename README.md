@@ -258,3 +258,39 @@ Below notes is not related to the project.
 
   the server, so do the code splitting when it is required in a smart way keeping these two points in mind.
 
+● Explore all the ways of writing css.
+● How do we configure tailwind?
+
+  tailwindcss, postcss - two dev dependencies need to be installed
+
+  npx tailwindcss init - this creates tailwind.config.js file
+
+  then you need .postcssrc file and you should enable tailwind plugin in it
+
+  parcel uses .postcssrc to understand tailwind
+
+  In tailwind.config.js module exports, need to add content property which says where and what type of files
+  
+  tailwind can be used.
+
+● In tailwind.config.js, what does all the keys mean (content, theme, extend,
+    plugins)?
+
+    content - already explained in the previous answer
+
+    The below answers are copied from here, you can refer more details.
+
+    https://tailwindcss.com/docs/
+
+
+
+    The theme section of your tailwind.config.js file is where you define your project’s color palette, type 
+    
+    scale, fonts, breakpoints, border radius values, and more.
+
+    If you’d like to preserve the default values for a theme option but also add new values, add your
+    
+    extensions under the theme.extend key in your configuration file.
+
+    Plugins let you register new styles for Tailwind to inject into the user’s stylesheet using JavaScript instead of CSS.
+

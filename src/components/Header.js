@@ -5,31 +5,25 @@ import { Link } from 'react-router-dom';
 
 
 const Header = () => {
-    const [logInOrOut, setLogInOrOut] = useState('login');
+    const [logInOrOut, setLogInOrOut] = useState('Sign In');
     const online = useOnline();
     return (
-        <div className='header'>
-            <div className='logo-container'>
-                <img className='logo' src={logo}/>
-            </div>
-            <div className='nav-items'>
-                <ul>
-                    <li>{online?(()=>(<span className='online'>Online&#9989;</span>))():(()=>(<span className='online'>Online&#128308;</span>))()}</li>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/contact'>Contact Us</Link></li>
-                    <li><a>Cart</a></li>
-                    <li><Link to='/grocery'>Grocery</Link></li>
-                    <li className='sign-in'><a onClick={()=>{
-                        if(logInOrOut === 'login'){
-                            setLogInOrOut('logout');
+                <ul className='flex font-bold w-full mb-2 px-[10%] py-[0.2%] flex-row flex-nowrap justify-between bg-slate-100 shadow-sm'>
+                    <li className='w-1/6'><img src={logo} className='w-[40%]'></img></li>
+                    <li>{online?(()=>(<span className='relative top-[30%]'>Online Status&#9989;</span>))():(()=>(<span>Online Status&#128308;</span>))()}</li>
+                    <li><Link className='relative top-[30%]' to='/'>Home</Link></li>
+                    <li><Link className='relative top-[30%]' to='/about'>About</Link></li>
+                    <li><Link className='relative top-[30%]' to='/contact'>Contact Us</Link></li>
+                    <li><a className='relative top-[30%] cursor-pointer'>Cart</a></li>
+                    <li><Link className='relative top-[30%]' to='/grocery'>Grocery</Link></li>
+                    <li><a className='relative top-[30%] cursor-pointer'onClick={()=>{
+                        if(logInOrOut === 'Sign In'){
+                            setLogInOrOut('Sign Out');
                         }else{
-                            setLogInOrOut('login');
+                            setLogInOrOut('Sign In');
                         }
                     }}>{logInOrOut}</a></li>
                 </ul>
-            </div>
-        </div>
     )
 }
 

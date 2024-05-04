@@ -13,15 +13,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const Grocery = lazy(()=>import('./components/Grocery.js'));
 const AppLayout = () => {
     return (
-        <div className='app'>
-            <div id="content">
-                <div className='content-container'>
+                <div className='flex flex-col'>
                     {Header()}
                     <Outlet />
                     {Footer()}
                 </div>
-            </div>
-        </div>
     )
 };
 

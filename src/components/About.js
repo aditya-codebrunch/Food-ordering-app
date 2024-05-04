@@ -1,6 +1,5 @@
-import User from './User.js';
+
 import UserClass from './UserClass.js';
-import AnotherUserClass from './AnotherUserClass.js';
 import { BASE_URL } from '../utils/constants.js';
 import React from 'react';
 
@@ -47,13 +46,11 @@ class About extends React.Component {
     render() {
         console.log("Parent Render");
         return !this.state.users ? (<h1>Loading...</h1>) : (
-            <div className="mid-content">
-                <h3>Hunger Games is a food delivery application</h3>
-                <h3>Here are our founders</h3>
-                <User name={this.state.users[0].name} emailId={this.state.users[0].emailId} mobileNumber={this.state.users[0].mobileNumber} />
+            <div className="px-[20%] text-center">
+                <h3 className='text-center font-bold mb-1'>Hunger Games is a food delivery application</h3>
+                <h3 className='text-center font-bold mb-2'>Here are our founders</h3>
+                <UserClass name={this.state.users[0].name} emailId={this.state.users[0].emailId} mobileNumber={this.state.users[0].mobileNumber} />
                 <UserClass name={this.state.users[1].name} emailId={this.state.users[1].emailId} mobileNumber={this.state.users[1].mobileNumber} />
-                <UserClass name={"Ashwathama"} emailId={this.state.users[1].emailId} mobileNumber={this.state.users[1].mobileNumber} />
-                <AnotherUserClass name={"Karna"} emailId={this.state.users[1].emailId} mobileNumber={this.state.users[1].mobileNumber} />
             </div>
         );
     }

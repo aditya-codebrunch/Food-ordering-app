@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FETCH_MOCK_DATA_URL } from '../utils/constants.js';
 
+let restaurants = [];
 const useRestaurantsList = () => {
     const [restaurantsList, setRestaurantsList] = useState([]);
     useEffect(() => {
@@ -15,7 +16,7 @@ const useRestaurantsList = () => {
             console.log(error);
         });
     }, []);
-    return [restaurantsList,setRestaurantsList];
+    return [restaurantsList,setRestaurantsList,restaurants];
 }
 
 export default useRestaurantsList;
