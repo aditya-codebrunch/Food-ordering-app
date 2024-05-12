@@ -2,6 +2,7 @@
 import UserClass from './UserClass.js';
 import { BASE_URL } from '../utils/constants.js';
 import React from 'react';
+import UserContext from '../utils/UserContext.js';
 
 //Commenting out functional implementation of the component
 
@@ -47,6 +48,11 @@ class About extends React.Component {
         console.log("Parent Render");
         return !this.state.users ? (<h1>Loading...</h1>) : (
             <div className="px-[20%] text-center">
+                    <UserContext.Consumer>
+                        {(data) => {
+                            return (<h1><i>Hey{ ' '+data.loggedInUser}</i></h1>)
+                        }}
+                    </UserContext.Consumer>
                 <h3 className='text-center font-bold mb-1'>Hunger Games is a food delivery application</h3>
                 <h3 className='text-center font-bold mb-2'>Here are our founders</h3>
                 <UserClass name={this.state.users[0].name} emailId={this.state.users[0].emailId} mobileNumber={this.state.users[0].mobileNumber} />

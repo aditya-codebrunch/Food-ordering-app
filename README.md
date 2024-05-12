@@ -294,3 +294,19 @@ Below notes is not related to the project.
 
     Plugins let you register new styles for Tailwind to inject into the user’s stylesheet using JavaScript instead of CSS.
 
+● What is prop drilling?
+
+  props passed from parent to child and to its child and so on till the intended component gets it.
+
+● What is lifting the state up?
+
+  Parent taking the control of the state of the child.
+
+● What is Context Provider and Context Consumer?
+
+  First is to pass a new value to the context and second is to consume it in the classes.
+
+● If you don’t pass a value to the provider does it take the default value?
+
+  It takes undefined value and throws warning as well.
+

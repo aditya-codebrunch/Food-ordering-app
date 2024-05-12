@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState, useContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import Content from './components/Content.js';
 import About from './components/About.js';
@@ -8,16 +8,32 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import RestaurantMenu from './components/RestaurantMenu.js';
+import UserContext from './utils/UserContext.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const Grocery = lazy(()=>import('./components/Grocery.js'));
+const Grocery = lazy(() => import('./components/Grocery.js'));
+
 const AppLayout = () => {
+    const { loggedInStatus, loggedInUser } = useContext(UserContext);
+    const [signedInStatus, setSignedInStatus] = useState(loggedInStatus);
+    const [signedInUser, setSignedInUser] = useState(loggedInUser);
+    console.log(signedInStatus);
+    console.log(setSignedInStatus);
     return (
-                <div className='flex flex-col'>
-                    {Header()}
-                    <Outlet />
-                    {Footer()}
-                </div>
+        <div className='flex flex-col'>
+            <UserContext.Provider value={
+                {
+                    loggedInStatus: signedInStatus,
+                    loggedInUser: signedInUser,
+                    setSignedInStatus: setSignedInStatus,
+                    setSignedInUser: setSignedInUser
+                }
+            }>
+                <Header/>
+                <Outlet />
+                <Footer/>
+            </UserContext.Provider>
+        </div>
     )
 };
 
